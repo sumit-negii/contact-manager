@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	  th:replace="user/base::layout(~{::section})">
+<head>
+<meta charset="UTF-8" />
+<title>home page</title>
+</head>
+<body>
+	<section>
+	
+
+		<div class="card mr-3 ml-3" >
+		
+			<div class="card-body pb-3 mb-2">
+				
+				<!-- Success or Error Message Box -->
+				<div th:if="${session.message}" th:classappend="${session.message.type}" class="alert" role="alert">
+					
+					<p th:text="${session.message.content}"></p>
+							
+ 					<th:block th:text="${#httpSession.removeAttribute('message')}"></th:block>
+							
+				</div>
+				
+				
+				<div class="container text-center">
+		
+		
+					<img th:src="@{'/img/'+${user.imageUrl}}" alt="profile pic" class="profile_picture " style="height: 200px; width: 200px" />
+					
+					<h1 th:text="${user.name}"></h1>
+		
+					<table class="table mt-3">
+						<!-- Contact ID -->
+						  <thead>
+						    <tr>
+						      <th scope="col"> <span>ID</span></th>
+						      <th scope="col">SCMUSER<span th:text="${user.id}"></span></th>
+						    </tr>
+						  </thead>
+						  <!-- Email , Phoen, Work -->
+						  <tbody>
+						     <tr>
+						        <th scope="row"><span>Role</span></th>
+						        <td><span th:text="${user.role}"></span></td>
+						     </tr>
+						     <tr>
+						        <th scope="row"><span>Email</span></th>
+						        <td><span th:text="${user.email}"></span></td>
+						     </tr>
+						     <tr>
+						        <th scope="row"><span>Account Active</span></th>
+						        <td><span th:text="${user.active}"></span></td>
+						     </tr>
+						  </tbody>
+						 
+				</table>	
+				
+				<!-- Description -->
+				 <div class="description mt-3">
+						  
+				  	<th:block th:utext="${user.about}"></th:block>
+						  
+				 </div>	
+		
+			</div>
+			
+			</div>
+			
+			</div>	
+			
+				
+		
+	</section>
+</body>
+</html>

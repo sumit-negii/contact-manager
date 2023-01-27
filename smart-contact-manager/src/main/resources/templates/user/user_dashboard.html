@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	  th:replace="user/base::layout(~{::section})">
+<head>
+<meta charset="UTF-8" />
+<title>home page</title>
+</head>
+<body>
+	<section>
+		
+		<div class="container">
+			<div class="card">
+				<div class="card-body p-5 mb-3 text-center">
+				
+					<div class="container">
+					
+						<!-- Image -->
+						<img th:src="@{'/img/phone-book.png'}" alt="profile pic" class=" " style="height: 200px; width: 200px" />
+					
+					</div>
+					
+					<h3 class="font-italic text-secondary mt-4">Store your contact in clouds for better management ...</h3>
+					<h3 class="font-italic text-secondary mt-4">Efficiently manage your contacts with our user-friendly, secure platform.
+
+
+
+					</h3>
+				
+					<a  th:href="@{/user/add-contact/}" class="btn btn-primary btn-block mt-4">Add New Contact</a>
+					
+				</div>
+			</div>
+		</div>
+		
+		
+		
+	</section>
+</body>
+</html>

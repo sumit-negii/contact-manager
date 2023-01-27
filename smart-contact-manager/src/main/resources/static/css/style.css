@@ -1,0 +1,125 @@
+body
+{
+ 	background-color: #e2e2e2;	 
+}
+
+.bg-primary
+{
+	background-color: #008B8B !important;
+}
+
+/* For Home page */
+.banner
+{
+	width: 100%;
+	height: 93vh;
+	background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../img/contacts.jpg");
+	background-size: cover;
+}
+
+/* For Register and Login page */
+.my-cart
+{
+	padding: 20px;
+	background: white;
+	border: solid 1px #9C9C9C;
+	margin-bottom: 200px;
+	margin-top: 70px;
+}
+
+
+/* Sidebar Style */
+.sidebar
+{
+	width: 18%;
+	background: white;
+	height: 100%;
+	position: fixed;
+	padding-top: 45px;
+	z-index: 99999999999999999;
+}
+.sidebar a{
+	
+	display: block;
+	width: 100%;
+	padding: 10px 25px;
+	text-decoration: none;
+	color: gray;
+}
+.sidebar a:hover{
+	
+	background-color: #e2e2e2;
+	
+}
+.sidebar .devider{
+	
+	height: 1px;
+	width: 100%;
+	margin-top: 10px;
+	background: #e2e2e2;
+	
+}
+.sidebar .crossBtn{
+	
+	position: absolute;
+	top: 0;
+	right: 35px;
+	font-size: 36px;
+	cursor: pointer;
+}
+
+@media only screen and (max-width:600px){
+	
+	.sidebar{
+		
+		display: none;
+		width: 80% !important;
+		height: 100vh;
+		background: white;
+		position: fixed;
+		padding-top: 20px;
+	}
+	
+	.content{
+		
+		margin-left: 0%!important;
+	
+	}
+	
+	
+}
+
+
+/* Content Style */
+.content
+{
+	margin-left: 20%;
+	
+	
+}
+
+/* Profile picture for show-contact page */
+.profile_picture
+{
+	width:32px;
+	height:32px;
+	object-fit:cover;
+	border-radius: 50%;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
