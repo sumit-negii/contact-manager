@@ -55,6 +55,7 @@ public class UserController
 		String email = principal.getName();		
 		User user = userService.getUserByEmail(email);
 		model.addAttribute("user", user);
+		System.out.println("Hello user : " + user);
 		
 	}
 	
