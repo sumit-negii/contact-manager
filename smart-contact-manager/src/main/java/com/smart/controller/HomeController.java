@@ -43,6 +43,7 @@ public class HomeController
 	{
 	
 		model.addAttribute("title", "About - Smart Contact Manager");
+		System.out.println("Testing println direct on main branch **** ");
 		return "about";
 	}
 	
